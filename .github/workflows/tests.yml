@@ -1,0 +1,44 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y make valgrind python3-pip
+        pip3 install lizard
+
+    - name: Run tests
+      run: |
+        cd tests
+        make
+
+    - name: Run Valgrind
+      run: |
+        cd tests
+        make valgrind-report
+
+    - name: Run Lizard
+      run: |
+        cd tests
+        make lizard-report
+
+    - name: Upload Valgrind Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: valgrind-report
+        path: tests/valgrind-report.txt
+
+    - name: Upload Lizard Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: lizard-report
+        path: tests/lizard-report.txt

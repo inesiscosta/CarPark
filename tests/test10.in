@@ -1,0 +1,28 @@
+p parque1 10 0.30 0.50 15.00
+p parque2 5 0.40 0.60 25.00
+p parque3 5 0.20 0.40 12.00
+p
+e parque1 AA-00-AA 01-01-2024 8:00
+s parque1 AA-00-AA 01-01-2024 8:10
+e parque2 AA-00-AA 01-01-2024 9:01
+s parque2 AA-00-AA 01-01-2024 9:21
+e parque1 AA-00-AA 01-01-2024 10:22
+s parque1 AA-00-AA 01-01-2024 12:02
+e parque3 AA-00-AA 02-01-2024 15:02
+s parque3 AA-00-AA 02-01-2024 19:02
+e parque1 AA-00-AA 02-01-2024 19:15
+s parque1 AA-00-AA 02-01-2024 23:05
+e parque2 AA-00-AA 03-01-2024 9:10
+s parque2 AA-00-AA 03-01-2024 9:10
+e parque3 AA-01-AA 03-01-2024 19:02
+s parque3 AA-01-AA 03-01-2024 19:02
+e parque1 AA-01-AA 03-01-2024 19:05
+s parque1 AA-01-AA 03-01-2024 19:05
+e parque3 AA-00-AA 03-01-2024 21:02
+s parque3 AA-00-AA 03-01-2024 22:02
+e parque1 AA-00-AA 04-01-2024 10:05
+s parque1 AA-00-AA 04-01-2024 11:05
+e parque1 AA-00-AA 05-01-2024 09:16
+v AA-00-AA
+v AA-01-AA
+q

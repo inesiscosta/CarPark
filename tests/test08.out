@@ -1,0 +1,21 @@
+parque1 10 10
+parque1 9
+parque1 8
+parque1 7
+parque1 6
+parque1 5
+parque1 4
+parque1 3
+parque1 2
+parque1 1
+parque1 0
+parque1 10 0
+parque2: no such parking.
+AA-10-AA: invalid vehicle exit.
+invalid date.
+invalid date.
+AA-00-AA 01-01-2024 08:00 01-01-2024 09:08 1.70
+invalid date.
+invalid date.
+AA-01-AA 01-01-2024 08:01 01-01-2024 23:59 15.00
+parque1 10 2

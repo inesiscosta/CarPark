@@ -1,0 +1,21 @@
+parque1 4
+parque1 3
+parque1 2
+parque1 1
+parque1 0
+parque3: no such parking.
+parque1: parking is full.
+Parque 2 4
+Parque 2 3
+Parque 2 2
+Parque 2 1
+AA-AA-AA: invalid licence plate.
+46-87-82: invalid licence plate.
+invalid date.
+invalid date.
+invalid date.
+invalid date.
+invalid date.
+AA-01-AA: invalid vehicle entry.
+parque1 5 0
+Parque 2 5 1

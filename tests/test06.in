@@ -1,0 +1,23 @@
+p parque1 5 0.30 0.50 15.00
+p "Parque 2" 5 0.20 0.40 13.00
+e parque1 AA-00-AA 01-01-2024 8:00
+e parque1 AA-01-AA 01-01-2024 8:01
+e parque1 AA-02-AA 01-01-2024 8:02
+e parque1 AA-03-AA 01-01-2024 8:03
+e parque1 AA-04-AA 01-01-2024 8:03
+e parque3 AA-14-AA 01-01-2024 8:03
+e parque1 AA-15-AA 01-01-2024 8:03
+e "Parque 2" AA-06-AA 01-01-2024 8:14
+e "Parque 2" AA-07-AA 01-01-2024 8:15
+e "Parque 2" AA-08-AA 01-01-2024 8:16
+e "Parque 2" AA-09-AA 01-01-2024 8:16
+e "Parque 2" AA-AA-AA 01-01-2024 8:20
+e "Parque 2" 46-87-82 01-01-2024 8:21
+e "Parque 2" 46-AA-82 01-01-2024 8:00
+e "Parque 2" 46-AA-82 31-02-2024 8:00
+e "Parque 2" 46-AA-82 31-06-2024 8:00
+e "Parque 2" 46-AA-82 32-07-2024 8:00
+e "Parque 2" 46-AA-82 28-00-2025 8:00
+e "Parque 2" AA-01-AA 02-01-2024 8:00
+p
+q
