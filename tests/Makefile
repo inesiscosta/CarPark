@@ -4,7 +4,7 @@ MAKEFLAGS += --no-print-directory # No entering and leaving messages
 SHELL := /bin/bash # Execute command with bash
 OK="\e[1;32mtest $< PASSED\e[0m"
 KO="\e[1;31mtest $< FAILED\e[0m"
-EXE=../proj1
+EXE=../project
 LOG=tests.log
 
 all:: clean # run regression tests
@@ -23,13 +23,14 @@ all:: clean # run regression tests
 out::
 	@for i in `ls test*.in | sed -e "s/in/out/"`; do $(MAKE) $(MFLAGS) $$i; done
 
-#tests:: cleanall
-#	python3 mktest.py tests.txt
-#	$(MAKE) $(MFLAGS) out
-#	$(MAKE) $(MFLAGS)
-
 clean::
 	@rm -f *.diff $(LOG)
 
 cleanall:: clean
 	@rm -f *.out *.in
+
+valgrind-report:
+	valgrind --leak-check=full $(EXE) < test01.in > valgrind-report.txt 2>&1
+
+lizard-report:
+	lizard ../ > lizard-report.txt
