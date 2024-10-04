@@ -32,13 +32,13 @@ jobs:
         make lizard-report
 
     - name: Upload Valgrind Report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: valgrind-report
         path: tests/valgrind-report.txt
 
     - name: Upload Lizard Report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: lizard-report
         path: tests/lizard-report.txt
