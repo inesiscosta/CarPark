@@ -1,4 +1,6 @@
-# Copyright (C) 2021, Pedro Reis dos Santos
+# tests/Makefile
+
+# Existing content
 .SUFFIXES: .in .out .diff
 MAKEFLAGS += --no-print-directory # No entering and leaving messages
 SHELL := /bin/bash # Execute command with bash
@@ -7,30 +9,33 @@ KO="\e[1;31mtest $< FAILED\e[0m"
 EXE=../project
 LOG=tests.log
 
-all:: clean # run regression tests
-	@rm -f $(LOG)
-	@for i in `ls test*.in | sed -e "s/in/diff/"`; do $(MAKE) $(MFLAGS) $$i; done
-	@echo "`wc -l < $(LOG)` tests passed"
+all:: build clean # run regression tests
+    @rm -f $(LOG)
+    @for i in `ls test*.in | sed -e "s/in/diff/"`; do $(MAKE) $(MFLAGS) $$i; done
+    @echo "`wc -l < $(LOG)` tests passed"
+
+build:
+    gcc -o $(EXE) ../*.c
 
 .in.diff:
-	@-$(EXE) < $< | diff - $*.out > $@
+    @-$(EXE) < $< | diff - $*.out > $@
 #	@-(ulimit -d 780 -t 1 && $(EXE) < $<) | diff - $*.out > $@
-	@if [ `wc -l < $@` -eq 0 ]; then echo -e $(OK); echo $* >> $(LOG); else echo -e $(KO); fi;
+    @if [ `wc -l < $@` -eq 0 ]; then echo -e $(OK); echo $* >> $(LOG); else echo -e $(KO); fi;
 
 .in.out:
-	$(EXE) < $< > $@
+    $(EXE) < $< > $@
 
 out::
-	@for i in `ls test*.in | sed -e "s/in/out/"`; do $(MAKE) $(MFLAGS) $$i; done
+    @for i in `ls test*.in | sed -e "s/in/out/"`; do $(MAKE) $(MFLAGS) $$i; done
 
 clean::
-	@rm -f *.diff $(LOG)
+    @rm -f *.diff $(LOG)
 
 cleanall:: clean
-	@rm -f *.out *.in
+    @rm -f *.out *.in
 
 valgrind-report:
-	valgrind --leak-check=full $(EXE) < test01.in > valgrind-report.txt 2>&1
+    valgrind --leak-check=full $(EXE) < test01.in > valgrind-report.txt 2>&1
 
 lizard-report:
-	lizard ../ > lizard-report.txt
+    lizard ../ > lizard-report.txt
