@@ -1,3 +1,5 @@
+# .github/workflows/tests.yml
+
 name: Tests
 
 on: [push, pull_request]
@@ -15,6 +17,11 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y make valgrind python3-pip
         pip3 install lizard
+
+    - name: Build project
+      run: |
+        cd tests
+        make build
 
     - name: Run tests
       run: |
