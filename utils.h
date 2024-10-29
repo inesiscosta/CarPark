@@ -1,7 +1,7 @@
 /**
  * Header file with function prototypes for utils.c
  * @file utils.h
- * @author inesiscosta
+ * @author @inesiscosta
 */
 
 #ifndef UTILS

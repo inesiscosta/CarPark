@@ -1,7 +1,7 @@
 /**
  * File containing auxiliar functions for the park management system.
  * @file utils.c
- * @author inesiscosta
+ * @author @inesiscosta
  */
 
 

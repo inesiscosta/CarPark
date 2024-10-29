@@ -2,7 +2,7 @@
  * File containing the functions which deal with the vehicle struct for the
  * parking lot management system.
  * @file vehicle.c
- * @author inesiscosta
+ * @author @inesiscosta
  */
 
 #include "vehicle.h"

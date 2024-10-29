@@ -2,7 +2,7 @@
  * A program implementing a parking lot management system.
  * This file contains the main function of that program.
  * @file main.c
- * @author inesiscosta
+ * @author @inesiscosta
  */
 
 /** Includes */

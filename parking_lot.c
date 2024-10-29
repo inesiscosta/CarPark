@@ -2,7 +2,7 @@
  * This file contains the implementation of the functions that use the 
  * ParkingLot structure for the parking lot management system.
  * @file parking_lot.c
- * @author inesiscosta
+ * @author @inesiscosta
  */
 
 /** Include */
