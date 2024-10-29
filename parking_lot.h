@@ -1,7 +1,7 @@
 /**
  * Header file for parking_lot.c
  * @file parking_lot.h
- * @author inesiscosta
+ * @author @inesiscosta
 */
 
 #ifndef PARKING

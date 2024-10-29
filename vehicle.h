@@ -1,7 +1,7 @@
 /**
  * Header file for vehicle.c
  * @file vehicle.h
- * @author inesiscosta
+ * @author @inesiscosta
 */
 
 #ifndef VEHICLE
