@@ -24,10 +24,10 @@ jobs:
         pip install lizard
 
     - name: Build with GCC
-      run: gcc -O3 -Wall -Wextra -Werror -Wno-unused-result -o proj1 *.c
+      run: gcc -O3 -Wall -Wextra -Werror -Wno-unused-result -o project *.c
       
     - name: Copy bin file to dir
-      run: cp ./proj1 ./tests/
+      run: cp ./project ./tests/
     
     - name: Run Public Tests
       run: make
@@ -41,13 +41,13 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: public_tests_log
-        path: ./Tests/public-tests/tests.log
+        path: ./tests/public-tests/public-tests.log
     
     - name: Upload log Private Tests
       uses: actions/upload-artifact@v3
       with:
         name: private_tests_log
-        path: ./Tests/private/tests.log
+        path: ./tests/private-tests/private-tests.log
     
     - name: Run Lizard
       run: lizard  -L 50 -T nloc=30 -C 15 -m *.c
