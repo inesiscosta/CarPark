@@ -38,13 +38,13 @@ jobs:
       working-directory: ./tests/private-tests
 
     - name: Upload log Public Tests
-      uses: actions/upload-artifact@v3.1.0
+      uses: actions/upload-artifact@v4
       with:
         name: public_tests_log
         path: ./tests/public-tests/public-tests.log
     
     - name: Upload log Private Tests
-      uses: actions/upload-artifact@v3.1.0
+      uses: actions/upload-artifact@v4
       with:
         name: private_tests_log
         path: ./tests/private-tests/private-tests.log
