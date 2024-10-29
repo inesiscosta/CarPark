@@ -1,0 +1,89 @@
+test01
+test02
+test04
+test05
+test06
+test07
+test08
+test09
+test10
+test11
+test12
+test13
+test14
+test15
+test16
+test17
+test18
+test test13.in PASSED in 0.3752319812774658 seconds
+test test03.in FAILED in 0.013023138046264648 seconds
+test test17.in PASSED in 0.11574602127075195 seconds
+test test07.in PASSED in 0.007519960403442383 seconds
+test test16.in PASSED in 0.009634017944335938 seconds
+test test06.in PASSED in 0.007877111434936523 seconds
+test test12.in PASSED in 0.008419036865234375 seconds
+test test02.in PASSED in 0.0074024200439453125 seconds
+test test09.in PASSED in 0.013173818588256836 seconds
+test test18.in PASSED in 0.9970741271972656 seconds
+test test08.in PASSED in 0.008053064346313477 seconds
+test test15.in PASSED in 0.0070002079010009766 seconds
+test test05.in PASSED in 0.008215904235839844 seconds
+test test11.in PASSED in 0.00710296630859375 seconds
+test test01.in PASSED in 0.007575035095214844 seconds
+test test10.in PASSED in 0.007042884826660156 seconds
+test test14.in PASSED in 0.008558034896850586 seconds
+test test04.in PASSED in 0.0075130462646484375 seconds
+test test13.in PASSED in 0.011867284774780273 seconds
+test test03.in FAILED in 0.010712146759033203 seconds
+test test17.in PASSED in 0.11521792411804199 seconds
+test test07.in PASSED in 0.007645845413208008 seconds
+test test16.in PASSED in 0.009507894515991211 seconds
+test test06.in PASSED in 0.008253812789916992 seconds
+test test12.in PASSED in 0.008861303329467773 seconds
+test test02.in PASSED in 0.00781393051147461 seconds
+test test09.in PASSED in 0.01313018798828125 seconds
+test test18.in PASSED in 1.003814935684204 seconds
+test test08.in PASSED in 0.009418010711669922 seconds
+test test15.in PASSED in 0.007849931716918945 seconds
+test test05.in PASSED in 0.007665872573852539 seconds
+test test11.in PASSED in 0.008800029754638672 seconds
+test test01.in PASSED in 0.008853912353515625 seconds
+test test10.in PASSED in 0.008409976959228516 seconds
+test test14.in PASSED in 0.008626937866210938 seconds
+test test04.in PASSED in 0.007519245147705078 seconds
+test test13.in PASSED in 0.42555689811706543 seconds
+test test03.in FAILED in 0.01618194580078125 seconds
+test test17.in PASSED in 0.11397290229797363 seconds
+test test07.in PASSED in 0.007790088653564453 seconds
+test test16.in PASSED in 0.009379148483276367 seconds
+test test06.in PASSED in 0.008018970489501953 seconds
+test test12.in PASSED in 0.0075380802154541016 seconds
+test test02.in PASSED in 0.008477210998535156 seconds
+test test09.in PASSED in 0.012142181396484375 seconds
+test test18.in PASSED in 0.999222993850708 seconds
+test test08.in PASSED in 0.007579803466796875 seconds
+test test15.in PASSED in 0.00768589973449707 seconds
+test test05.in PASSED in 0.0068700313568115234 seconds
+test test11.in PASSED in 0.007665872573852539 seconds
+test test01.in PASSED in 0.006890058517456055 seconds
+test test10.in PASSED in 0.007876873016357422 seconds
+test test14.in PASSED in 0.00695490837097168 seconds
+test test04.in PASSED in 0.007776975631713867 seconds
+test test13.in PASSED in 0.010442018508911133 seconds
+test test03.in FAILED in 0.009371042251586914 seconds
+test test17.in PASSED in 0.11708211898803711 seconds
+test test07.in PASSED in 0.007720947265625 seconds
+test test16.in PASSED in 0.008831977844238281 seconds
+test test06.in PASSED in 0.007887125015258789 seconds
+test test12.in PASSED in 0.007336854934692383 seconds
+test test02.in PASSED in 0.008078813552856445 seconds
+test test09.in PASSED in 0.011934041976928711 seconds
+test test18.in PASSED in 1.0196962356567383 seconds
+test test08.in PASSED in 0.0079498291015625 seconds
+test test15.in PASSED in 0.007441997528076172 seconds
+test test05.in PASSED in 0.007009029388427734 seconds
+test test11.in PASSED in 0.00795602798461914 seconds
+test test01.in PASSED in 0.0069119930267333984 seconds
+test test10.in PASSED in 0.0072498321533203125 seconds
+test test14.in PASSED in 0.006916046142578125 seconds
+test test04.in PASSED in 0.0074350833892822266 seconds
