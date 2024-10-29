@@ -1,11 +1,4 @@
-# Enunciado do Projeto 1 - IAED 2023/24
-
-## Data de entrega: 01 de abril 2024, às 19h59
-
-## LOG alterações
-
-- 8mar24 - Publicação do enunciado.
-- 14mar24 - Exemplo de facturação adicionado
+# Enunciado do Projeto - IAED 2023/24
 
 ## 1. Introdução
 
@@ -284,53 +277,3 @@ Posteriormente poderá comparar o seu output (`*.myout`) com o output previsto (
 ```
 
 Para testar o seu programa poderá executar os passos indicados acima ou usar o comando `make` na pasta `public-tests/`.
-
-## 5. Entrega do Projeto
-
-Será criado um repositório `git` para cada aluno desenvolver e submeter o projeto. Este repositório será criado no [GitLab da RNL](https://gitlab.rnl.tecnico.ulisboa.pt) e será activado quando da publicação deste enunciado.
-
-Na sua submissão do projeto deve considerar os seguinte pontos:
-
-- Considera-se que os seus ficheiros de desenvolvimento do projeto (`.c` e `.h`) estão na raiz do repositório e não numa directoria. *Qualquer ficheiro fora da raíz não será considerado como pertencendo ao seu projeto*.
-
-- A última versão que estiver no repositório da RNL será considerada a submissão para avaliação do projeto. Qualquer versão anterior ou que não esteja no repositório não será considerada na avaliação.
-
-- Quando actualizar os ficheiros `.c` e `.h` na directoria `src` no seu repositório na RNL, esta versão será avaliada e será informado se essa versão apresenta a resposta esperada num conjunto de casos de teste. Tal como no repositório dos laboratórios, o resultado da avaliação automática será colocado no *repositório de feedback* do aluno.
-
-- Para que o sistema de avaliação seja executado, tem que esperar pelo menos 10 minutos. Sempre que fizer uma actualização no repositório, começa um novo período de espera de 10 minutos. Exemplos de casos de teste serão oportunamente fornecidos.
-
-- Data limite de entrega do projeto: __01 de abril de 2024, às 19h59m__. Até à data limite poderá efectuar o número de submissões que desejar, sendo utilizada para efeitos de avaliação a última versão. Deverá portanto verificar cuidadosamente que a última versão no repositório GitLab da RNL corresponde à versão do projeto que pretende que seja avaliada. Não existirão excepções a esta regra.
-
-- Será dado um valor de bónus a quem entregar o projeto até dia __27 de março de 2024, às 19h59__. Caso haja qualquer alteração ao repositório após esta data e hora, o valor de bónus não será considerado.
-
-## 6. Avaliação do Projeto
-
-Na avaliação do projeto serão consideradas as seguintes componentes:
-
-1. A primeira componente avalia o desempenho da funcionalidade do programa realizado. Esta componente é avaliada entre 0 e 16 valores.
-
-2. A segunda componente avalia a qualidade do código entregue, nomeadamente os seguintes aspectos: comentários, indentação, estruturação, modularidade, abstracção, entre outros. Esta componente poderá variar entre -4 valores e +4 valores relativamente à classificação calculada no item anterior e será atribuída posteriormente.
-Algumas *guidelines* sobre este tópico podem ser encontradas [guidelines.md](guidelines.md).
-
-- A classificação da primeira componente da avaliação do projeto é obtida através da execução automática de um conjunto de testes num computador com o sistema operativo GNU/Linux. Torna-se portanto essencial que o código compile correctamente e que respeite o formato de entrada e saída dos dados descrito anteriormente. Projetos que não obedeçam ao formato indicado no enunciado serão penalizados na avaliação automática, podendo, no limite, ter 0 (zero) valores se falharem todos os testes. Os testes considerados para efeitos de avaliação poderão incluir (ou não) os disponibilizados na página da disciplina, além de um conjunto de testes adicionais. A execução de cada programa em cada teste é limitada na quantidade de memória que pode utilizar, e no tempo total disponível para execução, sendo o tempo limite distinto para cada teste.
-
-- Note-se que o facto de um projeto passar com sucesso o conjunto de testes disponibilizado na página da disciplina não implica que esse projeto esteja totalmente correcto. Apenas indica que passou alguns testes com sucesso, mas este conjunto de testes não é exaustivo. É da responsabilidade dos alunos garantir que o código produzido está correcto.
-
-- Em caso algum será disponibilizado qualquer tipo de informação sobre os casos de teste utilizados pelo sistema de avaliação automática. A totalidade dos ficheiros de teste usados na avaliação do projeto serão disponibilizados na página da disciplina após a data de entrega.
-
-- Os projectos que não usarem alocação dinâmica de memória nas estruturas de dados de tamanho variável serão penalizadas na segunda componente de avaliação até um máximo de 4 valores. Quem optar por alocação de memória estática pode considerar os seguintes limites nas estruturas de dados:
-    - Comprimento do nome dos parques de estacionamento: 50 *bytes*. Notar que um carácter acentuado em *utf-8* utiliza mais de um *byte*. Por exemplo `praça` tem 5 letras mas ocupa 6 *bytes* (`char` em __C__).
-    - Número máximo de veículos simultaneamente no sistema: 10000
-    - Número máximo de entradas de um veículo nos parques de estacionamento: 10000
-
-## 7. Dicas para Desenvolvimento do Projeto
-
-Abaixo podem encontrar algumas dicas simples que facilitam o despiste de erros comuns no desenvolvimento do projeto.
-Sugerimos que __desenvolvam os vossos projetos de forma incremental e que testem as vossas soluções localmente antes de actualizarem o repositório remoto__.
-
-Sugerimos que sigam os seguintes passos:
-
-1. Desenvolva e corrija o código de forma incremental garantindo que compila sem erros nem *warnings*. Não acumule uma série de erros pois o *debug* é tanto mais complexo quanto a dimensão da base de código a analisar.
-2. Garanta que está a ler o *input* e a escrever o *output* correctamente, em particular garanta que as *strings* não ficam com espaços extra, `\n` no final, que a formatação está correcta e de acordo com o que está no enunciado, *etc*.
-3. Procure desenvolver os comandos pela ordem apresentada.
-4. Teste isoladamente cada comando e verifique que funciona correctamente.
