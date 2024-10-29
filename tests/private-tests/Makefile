@@ -4,8 +4,8 @@ MAKEFLAGS += --no-print-directory # No entering and leaving messages
 SHELL := /bin/bash # Execute command with bash
 OK="\e[1;32mtest $< PASSED\e[0m"
 KO="\e[1;31mtest $< FAILED\e[0m"
-EXE=../park
-LOG=tests.log
+EXE=../project
+LOG=private-tests.log
 
 all:: clean # run regression tests
 	@rm -f $(LOG)
