@@ -18,9 +18,8 @@ int num_parks = 0; // Current number of parking lots in the system
  */
 void cleanup(char *command) {
     free(command);
-    for (int i = 0; i < num_parks; i++) {
+    for (int i = 0; i < num_parks; i++)
         free(parking_lots[i].name);
-    }
     free_hash_table();
 }
 
@@ -31,11 +30,9 @@ void cleanup(char *command) {
  * @return ParkingLot* if park with the given name is found, otherwise NULL
  */
 ParkingLot *find_park_by_name(char *name) {
-    for (int i = 0; i < num_parks; i++) {
-        if (strcmp(parking_lots[i].name, name) == 0) {
+    for (int i = 0; i < num_parks; i++)
+        if (strcmp(parking_lots[i].name, name) == 0)
             return &parking_lots[i];
-        }
-    }
     return NULL;
 }
 
@@ -91,9 +88,8 @@ char *entry_time, char *exit_date, char *exit_time) {
         fee += ((remaining_minutes + 14) / 15) * 
         parking_lot->quarter_hourly_rate_after_first_hour;
     } 
-    if (fee > parking_lot->max_daily_cost * (num_24_hour_periods + 1)) {
+    if (fee > parking_lot->max_daily_cost * (num_24_hour_periods + 1))
         fee = parking_lot->max_daily_cost * (num_24_hour_periods + 1);
-    }
     return fee;
 }
 
@@ -111,12 +107,11 @@ char *entry_time, char *exit_date, char *exit_time) {
 int is_valid_parking_lot(char *name, int capacity,
 float quarter_hourly_rate, float quarter_hourly_rate_after_first_hour, 
 float max_daily_cost) {
-    for (int i = 0; i < num_parks; i++) {
+    for (int i = 0; i < num_parks; i++)
         if (strcmp(parking_lots[i].name, name) == 0) {
             printf("%s: parking already exists.\n", name);
             return 0;
         }
-    }
     if (num_parks >= MAX_PARKS) {
         printf("too many parks.\n");
         return 0;
@@ -204,11 +199,9 @@ char *entry_date, char *entry_time, char *exit_date, char *exit_time) {
  * -1 if park is not found
  */
 int find_parking_lot_index(char *name) {
-    for (int i = 0; i < num_parks; i++) {
-        if (strcmp(parking_lots[i].name, name) == 0) {
+    for (int i = 0; i < num_parks; i++)
+        if (strcmp(parking_lots[i].name, name) == 0)
             return i;
-        }
-    }
     return -1;
 }
 
@@ -238,13 +231,11 @@ void sort_parks(char remaining_parks[][BUFSIZ], int num_parks) {
  */
 void print_remaining_parks() {
     char remaining_parks[MAX_PARKS][BUFSIZ];
-    for (int i = 0; i < num_parks; i++) {
+    for (int i = 0; i < num_parks; i++)
         strcpy(remaining_parks[i], parking_lots[i].name);
-    }
     sort_parks(remaining_parks, num_parks);
-    for (int i = 0; i < num_parks; i++) {
+    for (int i = 0; i < num_parks; i++)
         printf("%s\n", remaining_parks[i]);
-    }
 }
 
 /**
@@ -254,8 +245,7 @@ void print_remaining_parks() {
 void remove_parking_lot_entry(int index) {
     remove_entries_for_parking_lot(parking_lots[index].name);
     free(parking_lots[index].name);
-    for (int i = index; i < num_parks - 1; i++){
+    for (int i = index; i < num_parks - 1; i++)
         parking_lots[i] = parking_lots[i+1];
-    }
     num_parks--;
 }

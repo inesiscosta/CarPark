@@ -70,9 +70,8 @@ int is_vehicle_parked(char *license_plate) {
     Vehicle *current = vehicle_hash_table.table[hash_index];
     while (current != NULL) {
         if (strcmp(current->license_plate, license_plate) == 0 && 
-        current->exit_date[0] == '\0' && current->exit_time[0] == '\0') {
+        current->exit_date[0] == '\0' && current->exit_time[0] == '\0')
             return 1;
-        }
         current = current->next;
     }
     return 0;
@@ -90,9 +89,8 @@ int is_vehicle_parked_here(char *name, char *license_plate) {
     while (current != NULL) {
         if (strcmp(current->license_plate, license_plate) == 0 && 
         strcmp(current->name, name) == 0 
-        && current->exit_date[0] == '\0' && current->exit_time[0] == '\0') {
+        && current->exit_date[0] == '\0' && current->exit_time[0] == '\0')
             return 1;
-        }
         current = current->next;
     }
     return 0;
@@ -296,9 +294,8 @@ int count_entries_for_plate(char *plate) {
     Vehicle *current = vehicle_hash_table.table[hash_index];
     int num_entries = 0;
     while (current != NULL) {
-        if (strcmp(current->license_plate, plate) == 0) {
+        if (strcmp(current->license_plate, plate) == 0)
             num_entries++;
-        }
         current = current->next;
     }
     return num_entries;
@@ -327,9 +324,8 @@ void list_vehicle_entries_and_exits(char *command) {
     Vehicle *current = vehicle_hash_table.table[hash_index];
     int index = 0;
     while (current != NULL) {
-        if (strcmp(current->license_plate, plate) == 0) {
+        if (strcmp(current->license_plate, plate) == 0)
             entries[index++] = current;
-        }
         current = current->next;
     }
     sort_entries(entries, num_entries);
@@ -447,9 +443,8 @@ char *latest_time, char *first_date) {
                 Vehicle *current = vehicle_hash_table.table[i];
                 while (current != NULL) {
                     if (strcmp(current->name, name) == 0 && 
-                    strcmp(current->exit_date, date) == 0) {
+                    strcmp(current->exit_date, date) == 0)
                         total_daily_revenue += current->parking_fee;
-                    }
                     current = current->next;
                 }
             }
@@ -474,14 +469,12 @@ void remove_entries_for_parking_lot(char *name) {
             if (strcmp(current->name, name) == 0) {
                 if (prev == NULL) {
                     vehicle_hash_table.table[i] = current->next;
-                    if (current == vehicle_hash_table.tail[i]) {
+                    if (current == vehicle_hash_table.tail[i])
                         vehicle_hash_table.tail[i] = NULL;
-                    }
                 } else {
                     prev->next = current->next;
-                    if (current == vehicle_hash_table.tail[i]) {
+                    if (current == vehicle_hash_table.tail[i])
                         vehicle_hash_table.tail[i] = prev;
-                    }
                 }
                 free(current->name);
                 free(current);

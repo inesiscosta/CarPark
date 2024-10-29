@@ -37,21 +37,16 @@ int compare_datetime(char *date1, char *time1, char *date2, char *time2) {
     int day2, month2, year2, hour2, minute2;
     breakdown_datetime(date1, time1, &day1, &month1, &year1, &hour1, &minute1);
     breakdown_datetime(date2, time2, &day2, &month2, &year2, &hour2, &minute2);
-    if (year1 != year2) {
+    if (year1 != year2)
         return (year1 < year2) ? -1 : 1;
-    } 
-    if (month1 != month2) {
+    if (month1 != month2)
         return (month1 < month2) ? -1 : 1;
-    } 
-    if (day1 != day2) {
+    if (day1 != day2)
         return (day1 < day2) ? -1 : 1;
-    } 
-    if (hour1 != hour2) {
+    if (hour1 != hour2)
         return (hour1 < hour2) ? -1 : 1;
-    } 
-    if (minute1 != minute2) {
+    if (minute1 != minute2)
         return (minute1 < minute2) ? -1 : 1;
-    } 
     return 0;
 }
 
@@ -85,9 +80,8 @@ int park_exists(char *name) {
  * @return 1 if the license plate is valid, 0 otherwise
  */
 int is_valid_license_plate(char *plate) {
-    if (strlen(plate) != 8 || plate[2] != '-' || plate[5] != '-') {
+    if (strlen(plate) != 8 || plate[2] != '-' || plate[5] != '-')
         return 0;
-    }
     int letters = 0, numbers = 0;
     char previous_char = '\0';
     for (int i = 0; plate[i] != '\0'; i++) {
@@ -95,23 +89,20 @@ int is_valid_license_plate(char *plate) {
         if (isalpha(current_char)) {
             letters++;
             // Invald if letter is not uppercase or is followed by a digit
-            if (!isupper(current_char) || isdigit(previous_char)) {
+            if (!isupper(current_char) || isdigit(previous_char))
                 return 0;
-            }
         // Invalid if digit is not followed by a letter (must be a pair)
         } else if (isdigit(current_char)) {
             numbers++;
-            if (isalpha(previous_char)) {
+            if (isalpha(previous_char))
                 return 0;
-            }
         } else if (current_char != '-') {
             return 0;
         }
         previous_char = current_char;
     }
-    if (letters < 2 || numbers < 2) {
+    if (letters < 2 || numbers < 2)
         return 0;
-    }
     return 1;
 }
 
@@ -129,23 +120,18 @@ int is_valid_datetime(char *date, char *time, char *latest_date,
 char *latest_time) {
     int day, month, year, hour, minute;
     breakdown_datetime(date, time, &day, &month, &year, &hour, &minute);
-    if (compare_datetime(date, time, latest_date, latest_time) < 0) {
+    if (compare_datetime(date, time, latest_date, latest_time) < 0)
         return 0; 
-    }
-    if (month < 1 || month > 12) {
+    if (month < 1 || month > 12)
         return 0;
-    }
     // Check if day is valid for the month
     int days_in_month[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    if (day < 1 || day > days_in_month[month - 1]) {
+    if (day < 1 || day > days_in_month[month - 1])
         return 0;
-    }
-    if (hour < 0 || hour > 23) {
+    if (hour < 0 || hour > 23)
         return 0;
-    }
-    if (minute < 0 || minute > 59) {
+    if (minute < 0 || minute > 59)
         return 0;
-    }
     return 1;
 }
 
