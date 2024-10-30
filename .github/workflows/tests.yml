@@ -1,4 +1,4 @@
-name: MakeFile_Test
+name: Tests
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  Main_Tests:
+  Run-Tests:
 
     runs-on: ubuntu-latest
 
