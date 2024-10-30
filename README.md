@@ -27,7 +27,7 @@ Below are the commands you can use with the Parking Management System:
    - **Output:** None
 
 2. **Create or List Parking Lots (`p`):**
-   - **Input:** `p [<park-name> <capacity> <fare-for-each-15-minutes> <fare-for-15-minutes-after-1-hour> <max-daily-fare>]`
+   - **Input:** `p <park-name> <capacity> <fare-for-each-15-minute-block> <fare-for-each-15-minute-block-after-1-hour> <max-daily-fare>`
    - **Output without arguments:** `<park-name> <capacity> <available-spaces>`
    - **Output with arguments:** None
    - **Errors:**
