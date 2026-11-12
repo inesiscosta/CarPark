@@ -1,6 +1,6 @@
 # Parking Lot Management System
 
-This was a project for my Introduction to Algorithms and Data Structures class. It is a program written in C to manage car parks allowing a user to register different parks and log vehicle entrys and exits as well as the fare they need to pay for the time they stayed in the park. enunciado.md contains the instructions provided by the teacher.
+This was a project for my Introduction to Algorithms and Data Structures class. It is a program written in C to manage car parks allowing a user to register different parks and log vehicle entrys and exits as well as the fare they need to pay for the time they stayed in the park. `enunciado.md` contains the instructions provided by the teacher.
 
 ## Installation
 To set up the build environment run the following commands in your repository's root directory.
