@@ -1,4 +1,3 @@
-# Copyright (C) 2021, Pedro Reis dos Santos
 .SUFFIXES: .in .out .diff
 MAKEFLAGS += --no-print-directory # No entering and leaving messages
 SHELL := /bin/bash # Execute command with bash
